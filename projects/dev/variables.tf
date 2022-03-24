@@ -1,8 +1,5 @@
-variable "vpc_tags" {
-  description = "Tags to apply to resources created by VPC module"
-  type        = map(string)
-  default = {
-    Terraform   = "true"
-    Environment = "dev"
-  }
+variable "ami_id" {
+  default = "ami-0c02fb55956c7d316"
 }
+
+variable "ami_key_pair_name" {}

@@ -1,7 +1,7 @@
 resource "aws_instance" "jenkins-server" {
-  ami           = "ami-0c02fb55956c7d316"
+  ami           = var.ami_id
   instance_type = "t2.micro"
-  key_name      = "jenkins-kp"
+  key_name = var.ami_key_pair_name
 
   vpc_security_group_ids = ["${aws_security_group.jenkins-demo-sg.id}"]
 
@@ -45,5 +45,11 @@ resource "aws_security_group" "jenkins-demo-sg" {
     cidr_blocks = [
       "0.0.0.0/0",
     ]
+  }
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
   }
 }
