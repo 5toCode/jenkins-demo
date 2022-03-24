@@ -1,8 +1,6 @@
 # Local .terraform directories
 **/.terraform/*
-*/.terraform/*
 /Users/mroberts/Repos/github/jenkins-demo/projects/dev/.terraform/*
-/Users/mroberts/Repos/github/jenkins-demo/projects/dev/.terraform/providers/registry.terraform.io/hashicorp/aws/4.6.0/darwin_amd64/terraform-provider-aws_v4.6.0_x5
 
 # .tfstate files
 *.tfstate
@@ -35,3 +33,6 @@ override.tf.json
 # Ignore CLI configuration files
 .terraformrc
 terraform.rc
+
+# Mac files
+*.DS_Store
